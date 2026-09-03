@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Eldorado Brasil</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div id="startScreen">
+
+           <img src="imagem (3).png" class="logo" alt="Logo Eldorado">
+
+            <h1>ELDORADO BRASIL</h1>
+
+            <h2>Quiz Interativo - Comitê de Segurança das Transportadoras</h2>
+
+            <p>
+
+           <input
+                type="text"
+                id="playerName"
+                placeholder="Digite seu nome">
+                
+           <label for="avatar">
+               Escolha seu avatar:
+           </label>   
+
+           <select id="avatar">
+
+                <option value="🦁">🦁 Leão</option>
+                <option value="🐺">🐺 Lobo</option>
+                <option value="🦅">🦅 Águia</option>
+                <option value="🐯">🐯 Tigre</option>
+                <option value="🦊">🦊 Raposa</option>
+                <option value="🐨">🐨 Coala</option>
+                <option value="🐼">🐼 Panda</option>
+                <option value="🦒">🦒 Girafa</option>
+                <option value="🐘">🐘 Elefante</option>
+                <option value="🦉">🦉 Coruja</option>
+                <option value="🐸">🐸 Sapo</option>
+                <option value="🐢">🐢 Tartaruga</option>
+                <option value="🦜">🦜 Arara</option>
+                <option value="🐬">🐬 Golfinho</option>
+                <option value="🦈">🦈 Tubarão</option>  
+               
+            </select>
+                
+            <button onclick="enterLobby()">
+                Entrar na Sala
+            </button>
+
+            <p class="footer-info">    
+                Versão 2026 • Comitê de Segurança • Eldorado Brasil
+            </p>  
+            
+        </div>
+        
+<div id="lobbyScreen" class="hidden">
+    
+    <h1>🎯 Sala de Espera</h1>
+    
+    <h2 id="participantCount">
+        Participantes conectados: 0
+    </h2>   
+
+    <div id="participantList"></div>
+
+    <p>
+      Aguardando organizador iniciar o quiz...
+    </p>
+
+    <button id="startAllBtn" onclick="startForEveryone()">
+        🚀 INICIAR QUIZ
+        </button>
+
+    <button id="clearLobbyBtn" onclick="clearLobby()">
+        🧹 LIMPAR SALA
+    </button> 
+    
+        <div id="countdown"></div>
+    
+   </div> 
+    
+        <div id="quizScreen" class="hidden">
+
+            <div class="top-bar">
+                <span id="questionNumber"></span>
+                <span id="timer">20</span>
+            </div>
+
+            <div id="progressBar">
+                <div id="progress"></div>
+            </div>
+            
+            <h2 id="question"></h2>
+
+            <div id="answers"></div>
+
+        </div>
+
+        <div id="resultScreen" class="hidden">
+
+            <h1>Fim do Quiz</h1>
+
+            <h2 id="finalScore"></h2>
+            
+            <div id="rankingGlobal"></div>
+
+            <button onclick="location.reload()">
+                Reiniciar
+            </button>
+
+        </div>
+
+    </div>
+
+<script type="module" src="firebase.js"></script>
+<script type="module" src="script.js"></script>
+
+</body>
+</html>   
