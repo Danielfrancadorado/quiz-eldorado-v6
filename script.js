@@ -723,3 +723,9 @@ window.startQuiz = startQuiz;
 window.enterLobby = enterLobby;
 window.startForEveryone = startForEveryone;
 window.clearLobby = clearLobby;
+
+if(document.getElementById("participantList")){
+
+   loadParticipants();
+
+}
