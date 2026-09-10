@@ -282,21 +282,6 @@ score += 100 + timeLeft;
 
 nextQuestion();
  
-document.getElementById("quizScreen").classList.add("hidden"); 
-document.getElementById("rankingScreen").classList.remove("hidden"); 
-
-document.getElementById("liveRanking").innerHTML = ` 
-
-<h2>Sua pontuação atual: ${score}</h2> 
-`;
-
-setTimeout(()=>{ 
-
-document.getElementById("rankingScreen").classList.add("hidden"); 
-document.getElementById("quizScreen").classList.remove("hidden"); 
-nextQuestion(); 
-},3000); 
- 
 }
 
 function nextQuestion(){
