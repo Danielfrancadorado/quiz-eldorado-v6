@@ -212,3 +212,11 @@ select{
     background:#c9302c;
 }    
     
+#rankingScreen{ 
+text-align:center; 
+}
+
+#liveRanking{
+font-size:28px; 
+margin:30px; 
+}   
