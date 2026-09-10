@@ -280,7 +280,7 @@ score += 100 + timeLeft;
 
 }
 
-showRankingScreen();
+nextQuestion();
  
 document.getElementById("quizScreen").classList.add("hidden"); 
 document.getElementById("rankingScreen").classList.remove("hidden"); 
