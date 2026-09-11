@@ -278,54 +278,9 @@ if(index === quiz[current].correct){
 
 score += 100 + timeLeft;
 
-}
-
-function showRankingScreen(){
-
-document.getElementById("quizScreen")
-.classList.add("hidden"); 
+} 
  
-document.getElementById("rankingScreen")
-.classList.remove("hidden")
- 
-document.getElementById("liveRanking")
-.innerHTML = `
-<h2>Sua pontuação atual: ${score}</h2>
-`;
-
-let countdown = 3;
-
-const rankingText =
-document.querySelector("#rankingScreen p");
-
-rankingText.innerText =
-`Próxima pergunta em ${countdown} segundos...`;
-
-const interval = setInterval(()=>{
- 
-countdown--;
-
-if(countdown > 0){ 
-
-rankingText.innerText =
-`Próxima pergunta em ${countdown} segundos...`;
-
-}
-else{
-
-clearInterval(interval);
-
-document.getElementById("rankingScreen") 
-.classList.add("hidden");
-
-document.getElementById("quizScreen")
-.classList.remove("hidden");
-
 nextQuestion();
-
-}
-
-},1000);
 
 } 
 
